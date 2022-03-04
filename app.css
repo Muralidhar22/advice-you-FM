@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    /* ### Primary */
+
+--light-cyan: hsl(193, 38%, 86%);
+--Neon-Green: hsl(150, 100%, 66%);
+
+/* ### Neutral */
+
+--Grayish-Blue: hsl(217, 19%, 38%);
+--Dark-Grayish-Blue: hsl(217, 19%, 24%);
+--Dark-Blue: hsl(218, 23%, 16%);
+}
+html{
+    font-family: 'Manrope', sans-serif;
+}
+body{
+    background: var(--Dark-Blue);
+}
+main{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.advice-container{
+    background: var(--Dark-Grayish-Blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 1rem 1rem 0 1rem;
+}
+.advice-id{
+    color: var(--Neon-Green);
+}
+.quote{
+    color: var(--light-cyan);
+    font-size: 1.75rem;
+    width: 15ch;
+    margin: 1.5rem 0;
+    text-align: center;
+}
+.quote::before{
+    content: open-quote;
+}
+.quote::after{
+    content: close-quote;
+}
+.advice-text::after{
+    content: url("images/pattern-divider-mobile.svg");
+    display: block;
+}
+.new-advice:hover{
+    box-shadow: 0 0 15px 10px hsla(150, 100%, 66%,.3);
+}
+@media screen and (min-width: 750px) {
+    .quote{
+        width: 20ch;
+    }
+    .advice-text::after{
+        content: url("images/pattern-divider-desktop.svg");
+        display: block;
+    }
+}
+.new-advice{
+    border: none;
+    display: grid;
+    place-content: center;
+    background: var(--Neon-Green);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    transform: translateY(50%);
+}
+.attribution { font-size: 1rem;color: var(--light-cyan); text-align: center;}
+.attribution a { color: hsl(228, 45%, 44%); }
