@@ -45,7 +45,7 @@ main{
     color: var(--light-cyan);
     font-size: 1.75rem;
     width: 15ch;
-    margin: 1.5rem 0;
+    margin: 1.5rem auto;
     text-align: center;
 }
 .quote::before{
